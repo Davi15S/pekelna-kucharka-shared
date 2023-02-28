@@ -4,15 +4,15 @@ import { User } from "@shared/user";
 
 export interface RecipeForm {
   title: string;
-  author: User;
+  author?: User;
   description: string;
   ingredients: Ingredient[];
   images: string[];
-  categories: string[];
+  category: string;
   cookingTime: string;
   process: string[];
   comments: Comment[];
-  spiciness: number;
+  spiciness: string;
   approved: boolean;
   creationTime: string;
   recipeOrigin: string[];
