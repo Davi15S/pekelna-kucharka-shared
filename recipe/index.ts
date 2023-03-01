@@ -13,11 +13,11 @@ export interface RecipeForm {
   process: string[];
   comments: Comment[];
   spiciness: string;
-  approved: boolean;
   creationTime: string;
   recipeOrigin: string[];
 }
 
 export interface Recipe extends RecipeForm {
   id: string;
+  approved: boolean;
 }
