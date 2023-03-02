@@ -11,7 +11,6 @@ export interface RecipeForm {
   category: string;
   cookingTime: string;
   process: string[];
-  comments: Comment[];
   spiciness: string;
   creationTime: string;
   recipeOrigin: string[];
@@ -24,4 +23,5 @@ export interface Recipe {
 
 export interface RecipeAttributes extends RecipeForm {
   approved: boolean;
+  comments: Comment[];
 }
