@@ -17,7 +17,11 @@ export interface RecipeForm {
   recipeOrigin: string[];
 }
 
-export interface Recipe extends RecipeForm {
+export interface Recipe {
   id: string;
+  attributes: RecipeAttributes;
+}
+
+export interface RecipeAttributes extends RecipeForm {
   approved: boolean;
 }
