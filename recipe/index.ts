@@ -7,7 +7,6 @@ export interface RecipeForm {
   author?: User;
   description: string;
   ingredients: Ingredient[];
-  images: string[];
   category: string;
   cookingTime: string;
   process: string[];
@@ -24,4 +23,5 @@ export interface Recipe {
 export interface RecipeAttributes extends RecipeForm {
   approved: boolean;
   comments: Comment[];
+  images: string[];
 }
