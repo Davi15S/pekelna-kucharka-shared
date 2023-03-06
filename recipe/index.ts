@@ -23,5 +23,12 @@ export interface Recipe {
 export interface RecipeAttributes extends RecipeForm {
   approved: boolean;
   comments: Comment[];
-  images: string[];
+  images: { data: Image[] };
+}
+
+export interface Image {
+  attributes: {
+    url: string;
+  };
+  id: string;
 }
