@@ -4,7 +4,7 @@ import { User } from "@shared/user";
 
 export interface RecipeForm {
   title: string;
-  author?: any;
+  author: number | undefined;
   description: string;
   ingredients: Ingredient[];
   category: string;
@@ -12,6 +12,8 @@ export interface RecipeForm {
   process: string[];
   spiciness: string;
   recipeOrigin: string[];
+  publishedAt: string | null;
+  numberOfServings: string;
 }
 
 export interface Recipe {
@@ -19,11 +21,12 @@ export interface Recipe {
   attributes: RecipeAttributes;
 }
 
-export interface RecipeAttributes extends RecipeForm {
+export interface RecipeAttributes extends Omit<RecipeForm, "author"> {
   approved: boolean;
-  comments: Comment[];
+  comments: { data: Comment[] };
   publishedAt: string;
   images: { data: Image[] };
+  author: { data: { attributes: User } };
 }
 
 export interface Image {
