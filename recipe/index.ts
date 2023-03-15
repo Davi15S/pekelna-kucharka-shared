@@ -23,7 +23,7 @@ export interface Recipe {
 
 export interface RecipeAttributes extends Omit<RecipeForm, "author"> {
   approved: boolean;
-  comments: { data: Comment[] };
+  comments?: { data: Comment[] };
   publishedAt: string;
   images: { data: Image[] };
   author: { data: { attributes: User } };
