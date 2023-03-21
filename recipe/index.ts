@@ -14,6 +14,7 @@ export interface RecipeForm {
   recipeOrigin: string[];
   publishedAt: string | null;
   numberOfServings: string;
+  categories?: string[];
 }
 
 export interface Recipe {
