@@ -7,14 +7,13 @@ export interface RecipeForm {
   author: number | undefined;
   description: string;
   ingredients: Ingredient[];
-  category: string;
   cookingTime: string;
   process: string[];
   spiciness: string;
-  recipeOrigin: string[];
   publishedAt: string | null;
   numberOfServings: string;
-  categories?: string[];
+  categories: string[];
+  origins: string[];
 }
 
 export interface Recipe {
