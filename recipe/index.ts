@@ -7,7 +7,7 @@ export interface RecipeForm {
   author: number | undefined;
   description: string;
   ingredients: Ingredient[];
-  cookingTime: string;
+  cookingTime: number;
   process: string[];
   spiciness: string;
   publishedAt: string | null;
