@@ -35,3 +35,10 @@ export interface Image {
   };
   id: string;
 }
+
+export interface UserRecipes extends RecipeForm {
+  id: number;
+  images: {
+    url: string;
+  }[];
+}
