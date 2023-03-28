@@ -9,4 +9,5 @@ export interface User {
   blocked: boolean;
   comments: CommentAttributes[];
   recipes: UserRecipes[];
+  image?: string;
 }
